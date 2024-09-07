@@ -326,25 +326,6 @@ body {
 	transform: rotate(-90deg);
 }
 
-.tool-list > li > svg > circle {
-	stroke-width: 1px;
-	stroke: #cdcdcd;
-}
-
-.tool-list > li > svg > circle.cbar {
-	stroke-width: 3px;
-	stroke: var(--profile-theme);
-	stroke-linecap: round;
-	stroke-dasharray: calc(var(--MATH-PI) * 45 * 2);
-	transition: all 0.8s cubic-bezier(.64,.51,.16,.86);
-}
-
-.tool-list > li:hover > svg > circle.cbar {
-	stroke-width: 5px;
-	stroke: #337ab7;
-	stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
-}
-
 .tool-list > li > .tl-name,
 .tool-list > li > .tl-exp {
 	position: absolute;
@@ -402,16 +383,6 @@ body {
 
 .favor-list > li > span {
 	letter-spacing: 1px;
-}
-
-/* Анимация круга */
-@keyframes circle {
-  0% {
-    box-shadow: 0 0 0 0px rgba(51, 52, 57, 1);
-  }
-  100% {
-    box-shadow: 0 0 0 6px rgba(51, 52, 57, 0);
-  }
 }
 
 /* Media Queries */
@@ -553,4 +524,26 @@ body {
     flex-shrink: 0;
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.85), transparent);
     pointer-events: none;
+}
+
+.techStack ul {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding-left: 0;
+}
+
+.techStack li {
+    position: relative;
+    padding-left: 5%;
+    margin-bottom: 10px;
+    font-size: var(--font-size-base);
+
+}
+
+.techStack li::before {
+    content: '•'; /* Используем псевдоэлемент для маркера */
+    position: absolute;
+    left: 0;
+    color: var(--profile-theme); /* Цвет маркера */
+    font-size: 24px; /* Размер маркера */
+    line-height: 18px;
 }
