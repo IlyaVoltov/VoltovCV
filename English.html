@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ilya Voltov Data Аnalyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js" defer></script>
+    <script>
+ // Script for opening and closing modal windows
+document.addEventListener('DOMContentLoaded', function () {
+    const modals = document.querySelectorAll('[data-modal]');
+    const closeButtons = document.querySelectorAll('[data-close]');
+
+    // Open modal
+    modals.forEach(modal => {
+        modal.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetModal = document.querySelector(this.getAttribute('href'));
+            if (targetModal) {
+                targetModal.style.display = 'block';
+
+                // Close modal when clicking outside of it
+                window.addEventListener('click', function outsideClick(event) {
+                    if (event.target === targetModal) {
+                        targetModal.style.display = 'none';
+                        window.removeEventListener('click', outsideClick);
+                    }
+                });
+            }
+        });
+    });
+
+    // Close modal using close buttons
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const modal = this.closest('.modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+});
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="intro">
+            <div class="profile">
+                <div class="photo">
+                    <img src="short_photo.jpg" alt="Profile Photo of Ilya Voltov" />
+                </div>
+                <div class="bio">
+                    <h1 class="name">Ilya Voltov</h1>
+                    <p class="profession">Data Аnalyst</p>
+                </div>
+            </div>
+            <section class="intro-section about">
+                <h1 class="title">About me</h1>
+                <p class="paragraph">
+                    Highly motivated and responsible IT professional with 10 years of experience, including experience in development management.
+                <br>I closely follow current trends in the field of data science and actively apply them in my work.
+                </p>
+            </section>
+            <section class="intro-section contact">
+                <h1 class="title">Contacts</h1>
+                <div class="info-section">
+                    <i class="fas fa-phone"></i>
+                    <a target="_blank" rel="author" href="tel:+79817956314">
+                        <span>(+49) 16221944656</span>
+                    </a>
+                </div>
+                <div class="info-section">
+                    <i class="fas fa-envelope"></i>
+                    <a target="_blank" rel="author" href="mailto:ivoltovp@gmail.com">
+                        <span>ivoltovp@gmail.com</span>
+                    </a>
+                </div>
+                <div class="info-section link">
+                    <i class="fab fa-linkedin"></i>
+                    <a target="_blank" rel="author" href="https://www.linkedin.com/in/ilya-voltov-b44b49207">
+                        <span>ilya-voltov</span>
+                    </a>
+                </div>
+                <div class="info-section link">
+                    <i class="fab fa-telegram-plane"></i>
+                    <a target="_blank" rel="author" href="https://t.me/IliaVoltov">
+                        <span>Iliya Voltov</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="intro-section modals">
+                <div id="myModalCourses" class="modal">
+                    <div class="modal-content">
+                        <h3 style="text-align: center; font-weight: bold; justify-content: space-between;">Basic courses</h3>
+                        <div class="modal-body">
+                        <ul>
+                            <li>Coursera</li>
+                            <ul>
+                                <li>Master of Applied Data Science</li>
+                                <li>Google Project Management</li>
+                                <li>Introduction to Data Analytics</li>
+                            </ul>
+                            <li>Kaggle</li>
+                            <ul>
+                                <li>Advanced SQL <a href="certificates/AdvancedSQL.png">(certificate)</a></li>
+                                <li>Data Cleaning <a href="certificates/DataCleaning.png">(certificate)</a></li>
+                                <li>Python <a href="certificates/Python.png">(certificate)</a></li>
+                            </ul>
+                            <li>DevOps Start, DevOps School, St. Petersburg <a href="certificates/devOPS.png">(certificate)</a></li>
+                            <li>Stepik</li>
+                            <ul>
+                                <li>Python Generation</li>
+                                <li>Interactive SQL Simulator</li>
+                            </ul>
+                            <li>KARPOV.COURSES. A data analyst simulator</li>
+                        </ul>
+                        </div>
+                        <footer>
+                        <a class="mcclose" data-close>close</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="title">
+                   <a href="#myModalCourses" data-modal>Courses</a>
+                </div>
+            </section>
+
+            <section class="intro-section modals">
+                <div id="myModalConf" class="modal">
+                    <div class="modal-content">
+                        <h3 style="text-align: center; font-weight: bold; justify-content: space-between;">As a speaker</h3>
+                        <div class="modal-body">
+                        <ul>
+                            <li>CIGRE, INFORMATION SYSTEMS AND TELECOMUNICATION, 2022, Paris <a href="certificates/template.pdf">(presentation)</a></li>
+                            <li>Energynet.CØN 2021, online</li>
+                            <li>Energynet.CØN 2020, online</li>
+                            <li>Power BI meetup 2020, St. Petersburg</li>
+                            <li>UMNIK Energinet 2019, Moscow <a href="certificates/umnik.png">(certificate)</a></li>
+                            <li>33rd IBIMA Conference: 10-11 April 2019, Granada, Spain</li>
+                            <li>Scientific conference "Industrial Management, Economics and
+                                Ecology - 2017 (SPBMEI - 2017), St. Petersburg</li>
+                        </ul>
+                        </div>
+                        <footer>
+                        <a class="mconfclose" data-close>close</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="title">
+                    <a href="#myModalConf" data-modal>Conferences</a>
+                </div>
+            </section>
+
+
+            <section class="intro-section modals">
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <h3 style="text-align: center; font-weight: bold; justify-content: space-between;">Main projects</h3>
+                        <div class="modal-body">
+                        <ul>
+                            <li><span style="font-weight: bold; text-decoration: underline;">"ISON"</span> - decision-making assistance system (forecasting system)
+                                <br>Patent no.: <a href="https://new.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2021662181&TypeFile=html" target="_blank" rel="noopener noreferrer">2021662181</a>
+                                <br>position - <span style="text-decoration: underline;">Head of software development</span>
+                                <br>organizational tasks:
+                                <ul>
+                                    <li>managing the development team</li>
+                                    <li>Agile (scrum/kanban)</li>
+                                    <li>development of roadmaps and user-stories</li>
+                                    <li>converting business requirements into technical tasks</li>
+                                </ul>
+                                technical tasks:
+                                <ul>
+                                    <li>development of a technical strategy for the project</li>
+                                    <li>choosing technologies and tools for the project</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li><span style="font-weight: bold; text-decoration: underline;">"AS R&D Management"</span> - ERP (business process management)
+                                <br>position - <span style="text-decoration: underline;">Head of software development</span>
+                            </li>
+                            <br>
+                            <li><span style="font-weight: bold; text-decoration: underline;">"ASMD"</span> - equipment monitoring and diagnostics system
+                                <br>position - <span style="text-decoration: underline;">data analyst, programmer</span>
+                                <ul>
+                                    <li>working on a full cycle of BI issues</li>
+                                    <ul>
+                                        <li>development of models for forecasting the technical condition of equipment</li>
+                                        <li>development of analytical dashboards</li>
+                                    </ul>
+                                    <li>обработка ETL</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li><span style="font-weight: bold; text-decoration: underline;">Business intelligence systems based on Power BI and QlikView</span>
+                                <br>position - <span style="text-decoration: underline;">data analyst, programmer</span>
+                                <ul>
+                                    <li>data collection, сleaning and analysis (development of hypotheses and models)</li>
+                                    <li>development of analytical reports</li>
+                                    <li>creating an end—to-end data pipeline to ensure a complete processing cycle - from data warehouse to BI reports</li>
+                                    <li>optimization of SQL queries</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </div>
+                        <footer class="modal-container-footer">
+                        <a class="mprojclose" data-close>close</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="title">
+                    <a href="#myModal" data-modal>Projects</a>
+                </div>
+            </section>
+
+            <section class="intro-section contact">
+                <div class="info-section" style="padding-top: 8%;">
+                    <i class="fas fa-download"></i>
+                    <a href="CVs/english.pdf" download="CV Voltov">PDF</a>
+                </div>
+            </section>
+
+        </header>
+
+        <main class="detail">
+            <div class="link">
+                <button>
+                    <a href="index.html">Русский</a>
+                </button>
+            </div>
+
+            <section class="detail-section edu">
+                <div class="detail-title">
+                    <div class="title-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <span>Education</span>
+                </div>
+                <div class="detail-content">
+                    <div class="timeline-block">
+                        <h1>Econometrics and statistical analysis</h1>
+                        <p>St. Petersburg State University of Economics, St. Petersburg</p>
+                        <p>Master</p>
+                        <time>2008 - 2013</time>
+                    </div>
+                    <div class="timeline-block">
+                        <h1>Institute of Industrial Management, Economics and Trade</h1>
+                        <p>Peter the Great St. Petersburg Polytechnic University, St. Petersburg</p>
+                        <p>Graduate student</p>
+                        <time>2017</time>
+                    </div>
+                </div>
+            </section>
+
+            <section class="detail-section pg-skill">
+                <div class="detail-title">
+                    <div class="title-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <span>Basic skills</span>
+                </div>
+                <div class="detail-content">
+                    <ul class="pg-list">
+                        <li>
+                            <span>Statistical<br>analysis</span>
+                            <div class="sb-skeleton">
+                                <div class="skillbar" style="--pgbar-length: 70%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Data<br>visualization</span>
+                            <div class="sb-skeleton">
+                                <div class="skillbar" style="--pgbar-length: 70%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Databases</span>
+                            <div class="sb-skeleton">
+                                <div class="skillbar" style="--pgbar-length: 40%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Отчеты<br>Business insights</span>
+                            <div class="sb-skeleton">
+                                <div class="skillbar" style="--pgbar-length: 70%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Business analytics</span>
+                            <div class="sb-skeleton">
+                                <div class="skillbar" style="--pgbar-length: 75%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Communication</span>
+                            <div class="sb-skeleton">
+                                <div class="skillbar" style="--pgbar-length: 80%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Conflict<br>resolution</span>
+                            <div class="sb-skeleton">
+                                <div class="skillbar" style="--pgbar-length: 85%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="detail-section tools">
+              <div class="detail-title">
+                <div class="title-icon">
+                  <i class="fas fa-tools"></i>
+                </div>
+                <span>Development Tools</span>
+              </div>
+              <div class="detail-content">
+                <ul class="tool-list">
+                  <li>
+                    <svg viewbox="0 0 100 100">
+                      <circle cx="50" cy="50" r="45"></circle>
+                      <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.6"></circle>
+                    </svg>
+                    <span class="tl-name">JupyterLab,<br>G Colab</span>
+                    <span class="tl-exp">60%</span>
+                  </li>
+                  <li>
+                    <svg viewbox="0 0 100 100">
+                      <<circle cx="50" cy="50" r="45"></circle>
+                      <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.5"></circle>
+                    </svg>
+                    <span class="tl-name">PyCharm,<br>DataSpell</span>
+                    <span class="tl-exp">50%</span>
+                  </li>
+                  <li>
+                    <svg viewbox="0 0 100 100">
+                      <circle cx="50" cy="50" r="45"></circle>
+                      <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.5"></circle>
+                    </svg>
+                    <span class="tl-name">PostgreSQL,<br>ClickHouse</span>
+                    <span class="tl-exp">50%</span>
+                  </li>
+                  <li>
+                    <svg viewbox="0 0 100 100">
+                      <circle cx="50" cy="50" r="45"></circle>
+                      <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.6"></circle>
+                    </svg>
+                    <span class="tl-name">Docker</span>
+                    <span class="tl-exp">60%</span>
+                  </li>
+                </ul>
+                <ul class="tool-list">
+                  <li>
+                    <svg viewbox="0 0 100 100">
+                      <circle cx="50" cy="50" r="45"></circle>
+                      <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.6"></circle>
+                    </svg>
+                    <span class="tl-name">Git</span>
+                    <span class="tl-exp">60%</span>
+                  </li>
+                  <li>
+                    <svg viewbox="0 0 100 100">
+                      <circle cx="50" cy="50" r="45"></circle>
+                      <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.7"></circle>
+                    </svg>
+                    <span class="tl-name">Swagger</span>
+                    <span class="tl-exp">70%</span>
+                  </li>
+                  <li>
+                    <svg viewbox="0 0 100 100">
+                      <circle cx="50" cy="50" r="45"></circle>
+                      <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.6"></circle>
+                    </svg>
+                    <span class="tl-name">Apache Airflow</span>
+                    <span class="tl-exp">60%</span>
+                  </li>
+                  <li>
+                    <svg viewbox="0 0 100 100">
+                      <circle cx="50" cy="50" r="45"></circle>
+                      <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.37"></circle>
+                    </svg>
+                    <span class="tl-name">Plotly/<br>Dash</span>
+                    <span class="tl-exp">55%</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+
+            <section class="detail-section hobbi">
+              <div class="detail-section interests">
+                <div class="detail-title">
+                  <div class="title-icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <span>Hobby</span>
+                </div>
+                <div class="detail-content">
+                  <div class="outer-frame">
+                    <ul class="favor-list">
+                      <li>
+                        <i class="fas fa-paw"></i>
+                        <span>Pets</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-chess"></i>
+                        <span>Chess</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-book"></i>
+                        <span>Self-development</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-gamepad"></i>
+                        <span>Video games</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>
