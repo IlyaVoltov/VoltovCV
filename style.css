@@ -547,3 +547,61 @@ body {
     font-size: 24px; /* Размер маркера */
     line-height: 18px;
 }
+
+
+.hover-container {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+/* Стиль для самого попапа */
+.popup {
+	visibility: hidden;
+	width: 90%;
+	background-color: var(--profile-theme);
+	text-align: left;
+	padding: 10px;
+	border-radius: 5px;
+
+	/* Позиционирование попапа */
+	position: absolute;
+	z-index: 1;
+	bottom: 125%; /* Сдвиг вниз */
+	left: 50%;
+	transform: translateX(-50%);
+
+	/* Стрелочка */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+/* Стрелка под попапом */
+.popup::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #aaa transparent transparent transparent;
+}
+
+/* Отображение попапа при наведении */
+.hover-container:hover .popup {
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup-header {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Для добавления отступа между заголовком и содержанием */
+}
+
+.popup-content {
+    color: white;
+    font-weight: bold;
+    margin: 0.2rem 0; /* Отступы между пунктами */
+}
