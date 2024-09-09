@@ -549,7 +549,7 @@ body {
 	/* Pop-up positioning */
 	position: absolute;
 	z-index: 1;
-	bottom: 100%; /* Сдвиг вниз */
+	bottom: 93%; /* Сдвиг вниз */
 	left: 40%;
 	transform: translateX(-50%);
 
