@@ -397,35 +397,13 @@ body {
         flex: 0 0 100%;
         box-shadow: none;
     }
-}
-
-@media (max-width: 768px) {
-    html {
-        font-size: 80%;
+    .intro {
+        padding-bottom: var(--spacing-medium);
     }
-    .tool-list {
-        flex-wrap: wrap;
-    }
-    .tool-list > li {
-        flex: 0 0 100%;
-    }
-    .modal-content {
-        width: 80%;
+    .detail {
+        padding: var(--spacing-medium);
     }
 }
-
-@media (max-width: 480px) {
-    html {
-        font-size: 70%;
-    }
-    .photo img {
-        width: 100%;
-    }
-    .modal-content {
-        width: 90%;
-    }
-}
-
 /* Button and Link Styles */
 .link {
     overflow: hidden;
@@ -450,7 +428,7 @@ body {
 
 /* Modal Styles */
 
-/* Основные стили для модального окна */
+/* Basic styles for a modal window */
 .info-section .modal-body {
     position: fixed;
     z-index: 1000;
@@ -467,12 +445,19 @@ body {
     padding: 20px;
     border: 1px solid var(--profile-theme);
     width: 33%;
-    max-height: 80vh; /* Ограничение высоты модального окна */
-    overflow-y: auto; /* Включение вертикальной прокрутки */
+    max-height: 80vh; /* Limiting the height of the modal window */
+    overflow-y: auto; /* Enabling vertical scrolling */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
-/* Стили для кнопки закрытия */
+
+.modal-title {
+	text-align: center;
+	font-weight: bold;
+	justify-content: space-between;
+}
+
+/* Styles for the close button */
 .mcclose, .mconfclose, .mprojclose {
     color: #aaa;
     float: right;
@@ -488,17 +473,17 @@ body {
 }
 
 .modal-body {
-    max-height: 60vh; /* Ограничение высоты содержимого */
-    overflow-y: auto; /* Включение прокрутки для содержимого */
-    padding-right: 10px; /* Убирает перекрытие контента скроллбаром */
+    max-height: 60vh; /* Content height restriction */
+    overflow-y: auto; /* Enabling scrolling for content */
+    padding-right: 10px; /* Removes the overlap of the scrollbar content */
 	border-top: 1px solid var(--color-gray-light-1);
 }
 
 .modal-body {
-    scrollbar-width: none; /* Убирает скроллбар в Firefox */
+    scrollbar-width: none; /* Removes the scrollbar in Firefox */
 }
 
-/* Для полного исчезновения скроллбара и обеспечения бесшовного прокручивания */
+/* To completely disappear the scrollbar and ensure seamless scrolling */
 .modal-body {
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
@@ -527,7 +512,7 @@ body {
 }
 
 .techStack ul {
-    list-style: none; /* Убираем стандартные маркеры списка */
+    list-style: none; /* Removing the standard list markers */
     padding-left: 0;
 }
 
@@ -543,19 +528,16 @@ body {
     content: '•'; /* Используем псевдоэлемент для маркера */
     position: absolute;
     left: 0;
-    color: var(--profile-theme); /* Цвет маркера */
-    font-size: 24px; /* Размер маркера */
+    color: var(--profile-theme); /* Marker color */
+    font-size: 24px; /* Marker size */
     line-height: 18px;
 }
 
-
 .hover-container {
-	position: relative;
 	display: inline-block;
-	cursor: pointer;
 }
 
-/* Стиль для самого попапа */
+/* The style for the pop-up */
 .popup {
 	visibility: hidden;
 	width: 90%;
@@ -564,31 +546,31 @@ body {
 	padding: 10px;
 	border-radius: 5px;
 
-	/* Позиционирование попапа */
+	/* Pop-up positioning */
 	position: absolute;
 	z-index: 1;
-	bottom: 125%; /* Сдвиг вниз */
-	left: 50%;
+	bottom: 100%; /* Сдвиг вниз */
+	left: 40%;
 	transform: translateX(-50%);
 
-	/* Стрелочка */
+	/* The arrow */
 	opacity: 0;
 	transition: opacity 0.3s;
 }
 
-/* Стрелка под попапом */
+/* The arrow under the pop-up */
 .popup::after {
 	content: "";
 	position: absolute;
 	top: 100%;
 	left: 50%;
-	margin-left: -5px;
-	border-width: 5px;
+	margin-left: -11px;
+	border-width: 11px;
 	border-style: solid;
 	border-color: #aaa transparent transparent transparent;
 }
 
-/* Отображение попапа при наведении */
+/* Pop-up display on hover */
 .hover-container:hover .popup {
 	visibility: visible;
 	opacity: 1;
@@ -597,11 +579,10 @@ body {
 .popup-header {
     color: white;
     font-weight: bold;
-    margin-bottom: 0.5rem; /* Для добавления отступа между заголовком и содержанием */
+    margin-bottom: 0.5rem; /* To add an indentation between the title and the content */
 }
 
 .popup-content {
     color: white;
     font-weight: bold;
-    margin: 0.2rem 0; /* Отступы между пунктами */
 }
