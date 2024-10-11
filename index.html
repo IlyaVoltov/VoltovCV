@@ -47,22 +47,17 @@ document.addEventListener('DOMContentLoaded', function () {
 </head>
 
 <body>
-    <div class="wrapper">
         <header class="top-bar">
-            <div class="logo">Логотип</div>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#home">Главная</a></li>
-                    <li><a href="#about">О нас</a></li>
                     <li><a href="CVs/russian.pdf" download="резюме ВолтовИП">Скачать CV</a></li>
                     <li><a href="English.html">English</a></li>
                 </ul>
             </nav>
-            <div class="top-bar-buttons">
-                <button class="login-button">Войти</button>
-                <button class="signup-button">Регистрация</button>
-            </div>
         </header>
+
+    <main>
+        <div class="wrapper">
         <div class="intro">
             <div class="profile">
                 <div class="photo">
@@ -257,22 +252,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </section>
 
-            <section class="intro-section contact">
-                <div class="info-section" style="padding-top: 8%;">
-                    <i class="fas fa-download"></i>
-                    <a href="CVs/russian.pdf" download="резюме ВолтовИП">PDF</a>
-                </div>
-            </section>
-
         </div>
 
-        <main class="detail">
-            <div class="link">
-                <button>
-                    <a href="English.html">English</a>
-                </button>
-            </div>
-
+        <div class="detail">
             <section class="detail-section edu">
                 <div class="detail-title">
                     <div class="title-icon">
@@ -470,8 +452,9 @@ document.addEventListener('DOMContentLoaded', function () {
                   </div>
                 </div>
             </section>
-        </main>
-    </div>
+        </div>
+        </div>
+    </main>
 </body>
 
 </html>
