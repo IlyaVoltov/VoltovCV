@@ -2,7 +2,7 @@
 .top-bar {
   width: 100%;
   background: rgba(72, 130, 191, 0.7); /* Полупрозрачный фон с цветом */
-  padding: 15px 20px;
+  padding: 20px 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   max-width: 75%;
@@ -35,7 +35,7 @@
 
 /* Элементы списка */
 .nav-menu li {
-  margin-left: 30px; /* Пространство между элементами списка */
+  margin-left: 20px; /* Пространство между элементами списка */
 }
 
 /* Стили ссылок в меню */
