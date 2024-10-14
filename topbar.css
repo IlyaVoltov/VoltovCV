@@ -1,0 +1,81 @@
+/* Основные стили для верхней панели */
+.top-bar {
+    width: 100%;
+    background: rgba(72, 130, 191, 0.7); /* Полупрозрачный фон с цветом */
+    padding: 15px 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px; /* Закругленные углы */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: sticky; /* Закрепляем наверху при прокрутке */
+    top: 0; /* Когда скроллим, панель "прилипает" к верху */
+    z-index: 1000; /* Слой выше основного контента */
+  }
+
+  /* Навигационное меню */
+  .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  /* Стили для горизонтального меню */
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /* Элементы списка */
+  .nav-menu li {
+    margin-left: 30px; /* Пространство между элементами списка */
+  }
+
+  /* Стили ссылок в меню */
+  .nav-menu a {
+    text-decoration: none;
+    color: #fff; /* Белый цвет текста */
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон кнопок */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  /* Анимация при наведении */
+  .nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px); /* Плавное поднятие */
+  }
+
+  /* Адаптивные стили для мобильных устройств */
+  @media (max-width: 768px) {
+    .top-bar {
+      padding: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative; /* Убираем фиксацию для мобильных устройств */
+      top: auto; /* Отменяем фиксированную позицию */
+    }
+
+    .nav-menu ul {
+      justify-content: flex-start;
+    }
+
+    .nav-menu li {
+      margin-left: 10px;
+    }
+
+    .nav-menu a {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+  }

@@ -3,10 +3,12 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ilya Voltov Data Аnalyst</title>
+    <title>Voltov Ilia Data Analyst</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./topbar.css">
+    <link rel="stylesheet" href="./leftcolumn.css">
     <script src="https://kit.fontawesome.com/b99e675b6e.js" defer></script>
     <script>
  // Script for opening and closing modal windows
@@ -47,32 +49,62 @@ document.addEventListener('DOMContentLoaded', function () {
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="intro">
+    <header class="top-bar">
+        <nav class="nav-menu">
+          <ul>
+            <li>
+                <div class="title">
+                    <a href="#myModal" data-modal>My projects</a>
+                 </div>
+              </a>
+            </li>
+            <li>
+                <div class="title">
+                    <a href="#myModalConf" data-modal>Конференции со мной</a>
+                 </div>
+              </a>
+            </li>
+            <li>
+                <div class="title">
+                    <a href="#myModalCourses" data-modal>Курсы</a>
+                 </div>
+              </a>
+            </li>
+            <li>
+                <a href="CVs/russian.pdf" download="резюме ВолтовИП">
+                <i class="fas fa-download"></i> Скачать CV
+              </a>
+            </li>
+            <li>
+                <a href="index.html">
+                  <i class="fas fa-globe"></i> Русский
+                </a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper">
+        <div class="intro">
             <div class="profile">
                 <div class="photo">
                     <img src="short_photo.jpg" alt="Profile Photo of Ilya Voltov" />
                 </div>
                 <div class="bio">
-                    <h1 class="name">Ilya Voltov</h1>
-                    <p class="profession">Data Аnalyst</p>
+                    <h1 class="name">Илья Волтов</h1>
+                    <p class="profession">аналитик данных</p>
                 </div>
             </div>
             <section class="intro-section about">
-                <h1 class="title">About me</h1>
+                <h1 class="title">О себе</h1>
                 <p class="paragraph">
-                    Highly motivated and responsible IT professional with 10 years of experience, including experience in development management.
-                <br>I closely follow current trends in the field of data science and actively apply them in my work.
+                    Высокомотивированный и ответственный IT-профессионал с 10-летним опытом, включая опыт руководства разработкой.
+                    <br>Внимательно слежу за современными тенденциями в области науки о данных и активно применяю их в работе.
                 </p>
             </section>
             <section class="intro-section contact">
-                <h1 class="title">Contacts</h1>
-                <div class="info-section">
-                    <i class="fas fa-phone"></i>
-                    <a target="_blank" rel="author" href="tel:+4916221944656">
-                        <span>(+49) 16221944656</span>
-                    </a>
-                </div>
+                <h1 class="title">Контакты</h1>
                 <div class="info-section">
                     <i class="fas fa-envelope"></i>
                     <a target="_blank" rel="author" href="mailto:ivoltovp@gmail.com">
@@ -93,25 +125,27 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </section>
 
-            <section class="intro-section contact">
-                <h1 class="title">Technology Stack</h1>
+            <section class="intro-section stack">
+                <h1 class="title">Технологический стек</h1>
                 <div class="techStack">
-                    <ul>
-                        <li>Python (Pandas, Numpy, Matplotlib)</li>
-                        <li>Jupyter; Google Colab; PyCharm</li>
-                        <li>PostgreSQL; ClickHouse</li>
-                        <li>Swagger</li>
-                        <li>Docker</li>
-                        <li>Apache Airflow</li>
-                        <li>Plotly/Dash</li>
-                    </ul>
+                  <ul>
+                    <li><i class="fas fa-code"></i>C#; Python; JS</li>
+                    <li><i class="fas fa-laptop-code"></i>Jupyter; Google Colab; PyCharm</li>
+                    <li><i class="fas fa-database"></i>PostgreSQL; ClickHouse; MongoDB</li>
+                    <li><i class="fas fa-chart-bar"></i>Plotly/Dash</li>
+                    <li><i class="fas fa-server"></i>Docker; Kubernetes</li>
+                    <li><i class="fas fa-globe"></i>Swagger (работа с API)</li>
+                    <li><i class="fas fa-tasks"></i>Apache Airflow</li>
+                    <li><i class="fas fa-code-branch"></i>GIT</li>
+                  </ul>
                 </div>
-            </section>
+              </section>
+
 
             <section class="intro-section modals">
                 <div id="myModalCourses" class="modal">
                     <div class="modal-content">
-                        <h3 class="modal-title"">Basic courses</h3>
+                        <h3 class="modal-title"">Основные курсы</h3>
                         <div class="modal-body">
                         <ul>
                             <li>Coursera</li>
@@ -122,52 +156,46 @@ document.addEventListener('DOMContentLoaded', function () {
                             </ul>
                             <li>Kaggle</li>
                             <ul>
-                                <li>Advanced SQL <a href="certificates/AdvancedSQL.png">(certificate)</a></li>
-                                <li>Data Cleaning <a href="certificates/DataCleaning.png">(certificate)</a></li>
-                                <li>Python <a href="certificates/Python.png">(certificate)</a></li>
+                                <li>Advanced SQL <a href="certificates/AdvancedSQL.png">(сертификат)</a></li>
+                                <li>Data Cleaning <a href="certificates/DataCleaning.png">(сертификат)</a></li>
+                                <li>Python <a href="certificates/Python.png">(сертификат)</a></li>
                             </ul>
-                            <li>DevOps Start, DevOps School, St. Petersburg <a href="certificates/devOPS.png">(certificate)</a></li>
+                            <li>DevOps Старт, Школа DevOps, Санкт-Петербург <a href="certificates/devOPS.png">(сертификат)</a></li>
                             <li>Stepik</li>
                             <ul>
-                                <li>Python Generation</li>
-                                <li>Interactive SQL Simulator</li>
+                                <li>Поколение Python</li>
+                                <li>Интерактивный тренажер по SQL</li>
                             </ul>
-                            <li>KARPOV.COURSES. A data analyst simulator</li>
+                            <li>KARPOV.COURSES. Симулятор аналитика данных</li>
                         </ul>
                         </div>
                         <footer>
-                        <a class="mcclose" data-close>close</a>
+                        <a class="mcclose" data-close>закрыть</a>
                         </footer>
                     </div>
-                </div>
-                <div class="title">
-                   <a href="#myModalCourses" data-modal>Courses</a>
                 </div>
             </section>
 
             <section class="intro-section modals">
                 <div id="myModalConf" class="modal">
                     <div class="modal-content">
-                        <h3 class="modal-title">As a speaker</h3>
+                        <h3 class="modal-title">В качестве докладчика</h3>
                         <div class="modal-body">
                         <ul>
-                            <li>CIGRE, INFORMATION SYSTEMS AND TELECOMUNICATION, 2022, Paris <a href="certificates/template.pdf">(presentation)</a></li>
+                            <li>CIGRE, INFORMATION SYSTEMS AND TELECOMUNICATION, 2022, Paris <a href="certificates/template.pdf">(доклад)</a></li>
                             <li>Energynet.CØN 2021, online</li>
                             <li>Energynet.CØN 2020, online</li>
-                            <li>Power BI meetup 2020, St. Petersburg</li>
-                            <li>UMNIK Energinet 2019, Moscow <a href="certificates/umnik.png">(certificate)</a></li>
+                            <li>Power BI meetup 2020, Санкт-Петербург</li>
+                            <li>УМНИК Энерджинет 2019, Москва <a href="certificates/umnik.png">(сертификат)</a></li>
                             <li>33rd IBIMA Conference: 10-11 April 2019, Granada, Spain</li>
-                            <li>Scientific conference "Industrial Management, Economics and
-                                Ecology - 2017 (SPBMEI - 2017), St. Petersburg</li>
+                            <li>Научная конференция "Промышленный менеджмент, экономика и
+                                экология - 2017" (СПБМЭИ - 2017), Санкт-Петербург</li>
                         </ul>
                         </div>
                         <footer>
-                        <a class="mconfclose" data-close>close</a>
+                        <a class="mconfclose" data-close>закрыть</a>
                         </footer>
                     </div>
-                </div>
-                <div class="title">
-                    <a href="#myModalConf" data-modal>Conferences</a>
                 </div>
             </section>
 
@@ -175,103 +203,90 @@ document.addEventListener('DOMContentLoaded', function () {
             <section class="intro-section modals">
                 <div id="myModal" class="modal">
                     <div class="modal-content">
-                        <h3 class="modal-title">Main projects</h3>
+                        <h3 class="modal-title">Основные проекты</h3>
                         <div class="modal-body">
                         <ul>
-                            <li><span style="font-weight: bold; text-decoration: underline;">"ISON"</span> - decision-making assistance system (forecasting system)
-                                <br>Patent no.: <a href="https://new.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2021662181&TypeFile=html" target="_blank" rel="noopener noreferrer">2021662181</a>
-                                <br>position - <span style="text-decoration: underline;">Head of software development</span>
-                                <br>The main aims:
+                            <li><span style="font-weight: bold; text-decoration: underline;">"ИСОН"</span> - система помощи принятия решений (прогнозирование точек небаланса электроэнергии)
+                                <br>патент №: <a href="https://new.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2021662181&TypeFile=html" target="_blank" rel="noopener noreferrer">2021662181</a>
+                                <br>должность - <span style="text-decoration: underline;">руководитель команды разработки</span>
+                                <br>Основные цели проекта:
                                 <ul>
-                                    <li>identifying points of unaccounted electricity consumption</li>
-                                    <li>reducing the percentage of non technical losses</li>
-                                    <li>reducing the decision-making time</li>
+                                    <li>выявление точек неучтенного потребления электроэнергии</li>
+                                    <li>снижение процента нетехнических потерь</li>
+                                    <li>сокращение времени на принятие решений</li>
                                 </ul>
-                                Method/Approach
-                                <ul>Machine learning ensemble:
-                                    <li>data clustering - C-means</li>
-                                    <li>classification task - CatBoost</li>
-                                    <li>time series forecast - LSTM</li>
-                                </ul>
-                                Size of dataset:
+                                Реализация:
                                 <ul>
-                                    <li>5 years of hourly measurements</li>
-                                    <li>unique customers - 293 837</li>
-                                </ul>
-                            </li>
-                            <br>
-                            <li><span style="font-weight: bold; text-decoration: underline;">"AS R&D Management"</span> - ERP (business process management)
-                                <br>position - <span style="text-decoration: underline;">Head of software development</span>
-                                <br>A multi-module system for managing the company's business processes.
-                                <br>Semantic document search based on the ElasticSearch engine.
-                            </li>
-                            <br>
-                            <li><span style="font-weight: bold; text-decoration: underline;">"ASMD"</span> - equipment monitoring and diagnostics system
-                                <br>position - <span style="text-decoration: underline;">data analyst, programmer</span>
-                                <ul>
-                                    <li>full cycle of BI issues</li>
+                                    <li>ансамбль машинного обучения</li>
                                     <ul>
-                                        <li>prediction of the technical condition of the equipment</li>
-                                        <li>analytical dashboards</li>
+                                        <li>кластеризация данных - C-means</li>
+                                        <li>задача классификации - CatBoost</li>
+                                        <li>прогноз временных рядов - LSTM</li>
                                     </ul>
-                                    <li>ETL processing</li>
+                                </ul>
+                                Размер набора данных:
+                                <ul>
+                                    <li>почасовые измерения за 5 лет</li>
+                                    <li>количество уникальных потребителей - 293 837</li>
                                 </ul>
                             </li>
                             <br>
-                            <li><span style="font-weight: bold; text-decoration: underline;">Business intelligence systems based on Power BI and QlikView</span>
-                                <br>position - <span style="text-decoration: underline;">data analyst, programmer</span>
+                            <li><span style="font-weight: bold; text-decoration: underline;">"Управление НИОКР"</span> - ERP (управление бизнес-процессами)
+                                <br>должность - <span style="text-decoration: underline;">руководитель команды разработки</span>
+                                <br>Многомодульная система для управления бизнес-процессами компании.
+                                <br>Семантический поиск документов на основе движка ElasticSearch.
+                            </li>
+                            <br>
+                            <li><span style="font-weight: bold; text-decoration: underline;">"АСМД"</span> - система мониторинга и диагностики трансформаторного оборудования
+                                <br>должность - <span style="text-decoration: underline;">аналитик данных, программист</span>
                                 <ul>
-                                    <li>creating dashboards (combining data from various sources to create visual and understandable dashboards)</li>
-                                    <li>importing data from various sources (Excel, SQL databases, web services)</li>
-                                    <li>creating an end—to-end data pipeline to ensure a complete processing cycle - from data warehouse to BI reports</li>
+                                    <li>полный цикл бизнес-задач</li>
+                                    <ul>
+                                        <li>прогнозирование технического состояния оборудования</li>
+                                        <li>аналитическая панель мониторингаs</li>
+                                    </ul>
+                                    <li>пакетная обработка ETL</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li><span style="font-weight: bold; text-decoration: underline;">Системы бизнес-аналитики на базе Power BI и QlikView</span>
+                                <br>должность - <span style="text-decoration: underline;">аналитик данных, программист</span>
+                                <ul>
+                                    <li>создание информационных панелей (объединение данных из различных источников для создания наглядных и понятных дашбордов)</li>
+                                    <li>импорт данных из различных источников (Excel, базы данных SQL, веб-сервисы)</li>
+                                    <li>создание сквозного конвейера обработки данных для обеспечения полного цикла обработки — от хранилища данных до отчетов BI</li>
                                 </ul>
                             </li>
                         </ul>
                         </div>
                         <footer class="modal-container-footer">
-                        <a class="mprojclose" data-close>close</a>
+                        <a class="mprojclose" data-close>закрыть</a>
                         </footer>
                     </div>
                 </div>
-                <div class="title">
-                    <a href="#myModal" data-modal>Projects</a>
-                </div>
             </section>
 
-            <section class="intro-section contact">
-                <div class="info-section" style="padding-top: 8%;">
-                    <i class="fas fa-download"></i>
-                    <a href="CVs/english.pdf" download="CV Voltov">PDF</a>
-                </div>
-            </section>
+        </div>
 
-        </header>
-
-        <main class="detail">
-            <div class="link">
-                <button>
-                    <a href="index.html">Русский</a>
-                </button>
-            </div>
-
+        <div class="detail">
             <section class="detail-section edu">
                 <div class="detail-title">
                     <div class="title-icon">
                         <i class="fas fa-user-graduate"></i>
                     </div>
-                    <span>Education</span>
+                    <span>Образование</span>
                 </div>
                 <div class="detail-content">
                     <div class="timeline-block">
-                        <h1>Econometrics and statistical analysis</h1>
-                        <p>St. Petersburg State University of Economics, St. Petersburg</p>
-                        <p>Master</p>
+                        <h1>Эконометрика и статистический анализ</h1>
+                        <p>Санкт-Петербургский государственный экономический университет, Санкт-Петербург</p>
+                        <p>магистр</p>
                         <time>2008 - 2013</time>
                     </div>
                     <div class="timeline-block">
-                        <h1>Institute of Industrial Management, Economics and Trade</h1>
-                        <p>Peter the Great St. Petersburg Polytechnic University, St. Petersburg</p>
-                        <p>Graduate student</p>
+                        <h1>Институт промышленного менеджмента, экономики и торговли</h1>
+                        <p>Санкт-Петербургский политехнический университет Петра Великого, Санкт-Петербург</p>
+                        <p>аспирант</p>
                         <time>2017</time>
                     </div>
                 </div>
@@ -282,42 +297,45 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="title-icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
-                    <span>Work experience</span>
+                    <span>Опыт работы</span>
                 </div>
                 <div class="detail-content">
                     <div class="timeline-block">
-                        <h1>Data analyst</h1>
+                        <h1>Аналитик данных</h1>
                         <div class="hover-container">
-                        <p>GlowByte Consulting (developing data-driven solutions)</p>
-                        <p>working with more than 100 tables in the PostgreSQL, implementation of more than 140 dashboards</p>
+                        <p>GlowByte Consulting (data-driven solutions)</p>
+                        <p>работа с более чем 100 таблицами в PostgreSQL, реализация более 140 информационных панелей</p>
                             <div class="popup">
-                                <a class="popup-header">Responsibilities:</a>
-                                <a class="popup-content"><br>- <code>Identify</code> the business question (negotiations with customers)
-                                <br>- Data <code>collection</code>, <code>cleaning</code> and <code>analysis</code> (development of hypotheses and models)
-                                <br>- <code>Development</code> of analytical reports based on the developed models</a>
+                                <a class="popup-header">Обязанности:</a>
+                                <a class="popup-content"><br>- формулирование бизнес-задач (переговоры с клиентами)
+                                <br>- <code>сбор, очистка и анализ</code> данных (разработка гипотез и моделей)
+                                <br>- <code>разработка аналитических отчетов (дашбордов)</code> на основе разработанных моделей
+                                </a>
                             </div>
                         <time>2023 - 2024</time>
                         </div>
                     </div>
                     <div class="timeline-block">
-                        <h1>Head of software development</h1>
+                        <h1>Начальник Управления разработки ПО</h1>
                         <div class="hover-container">
-                        <p>PJSC "Federal Testing Center"</p>
-                        <p>4 large projects have been developed and implemented in 7 large companies</p>
+                        <p>ПАО "Россети Научно-технический центр"</p>
+                        <p>разработано 4 крупных проекта, внедрение в 7 крупных компаний</p>
                             <div class="popup">
-                                <a class="popup-header">Responsibilities:</a>
+                                <a class="popup-header">Обязанности:</a>
                                 <a class="popup-content">
-                                    <br><code> - organizational tasks</code>
+                                    <br><code> - организационные задачи</code>
                                     <ul>
-                                        <li>managing the development team</li>
+                                        <li>управление командой разработки</li>
                                         <li>Agile (scrum/kanban)</li>
-                                        <li>development of roadmaps and user-stories</li>
-                                        <li>converting business requirements into technical tasks</li>
+                                        <li>разработка дорожных карт and user-stories</li>
+                                        <li>преобразование бизнес-требований в технические задачи</li>
                                     </ul>
-                                    <code> - technical tasks</code>
+                                    <code> - технические задачи</code>
                                     <ul>
-                                        <li>development of a technical strategy for the project</li>
-                                        <li>choosing technologies and tools for the project</li>
+                                        <li>разработка технической стратегии для проекта</li>
+                                        <li>выбор технологий и инструментов для проекта</li>
+                                        <li>создание систем и алгоритмов для оптимального экспорта и обработки
+                                            данных</li>
                                     </ul>
                                 </a>
                             </div>
@@ -325,16 +343,15 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     </div>
                     <div class="timeline-block">
-                        <h1>Data analyst of the situational-analytical center</h1>
+                        <h1>Аналитик данных</h1>
                         <div class="hover-container">
-                        <p>PJSC “Rosseti Lenergo” (PJSC ROSSETI)</p>
-                        <p>processing a dataset containing over 1200 items</p>
+                        <p>ПАО "Россети Ленэнерго"</p>
+                        <p>обработка набора данных, содержащего свыше 1200 элементов</p>
                             <div class="popup">
-                                <a class="popup-header">Responsibilities:</a>
-                                <a class="popup-content"><br>- Effectively planned collaboration with a large team on data-driven initiatives
-                                    to address complex operational challengess
-                                <br>- Developed statistical techniques and used machine learning to solve problems
-                                <br>- <code>Created end-to-end data</code> pipeline from data warehouse to BI report
+                                <a class="popup-header">Обязанности:</a>
+                                <a class="popup-content"><br>- оптимальное планирование и совместная работа в крупной команде
+                                <br>- создание статистических моделей и <code>применение машинного обучения</code> для решения задач
+                                <br>- <code>реализация end-to-end data pipeline</code> от хранилища данных к BI
                             </a>
                             </div>
                         <time>2014 - 2018</time>
@@ -348,48 +365,48 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="title-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <span>Basic skills</span>
+                    <span>Основные навыки</span>
                 </div>
                 <div class="detail-content">
                     <ul class="pg-list">
                         <li>
-                            <span>Statistical<br>analysis</span>
+                            <span>Статистический<br>анализ</span>
                             <div class="sb-skeleton">
                                 <div class="skillbar" style="--pgbar-length: 70%"></div>
                             </div>
                         </li>
                         <li>
-                            <span>Data<br>visualization</span>
+                            <span>Визуализация<br>данных</span>
                             <div class="sb-skeleton">
                                 <div class="skillbar" style="--pgbar-length: 70%"></div>
                             </div>
                         </li>
                         <li>
-                            <span>Databases</span>
+                            <span>Базы данных</span>
                             <div class="sb-skeleton">
                                 <div class="skillbar" style="--pgbar-length: 40%"></div>
                             </div>
                         </li>
                         <li>
-                            <span>Business insights<br>reports</span>
+                            <span>Отчеты<br>Business insights</span>
                             <div class="sb-skeleton">
                                 <div class="skillbar" style="--pgbar-length: 70%"></div>
                             </div>
                         </li>
                         <li>
-                            <span>Business analytics</span>
+                            <span>Бизнес-аналитика</span>
                             <div class="sb-skeleton">
                                 <div class="skillbar" style="--pgbar-length: 75%"></div>
                             </div>
                         </li>
                         <li>
-                            <span>Communication</span>
+                            <span>Коммуникации</span>
                             <div class="sb-skeleton">
                                 <div class="skillbar" style="--pgbar-length: 80%"></div>
                             </div>
                         </li>
                         <li>
-                            <span>Conflict<br>resolution</span>
+                            <span>Решение<br>конфликтов</span>
                             <div class="sb-skeleton">
                                 <div class="skillbar" style="--pgbar-length: 85%"></div>
                             </div>
@@ -404,7 +421,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="title-icon">
                       <i class="fas fa-heart"></i>
                     </div>
-                    <span>Hobby</span>
+                    <span>Хобби</span>
                   </div>
                   <div class="detail-content">
                     <div class="outer-frame">
@@ -413,34 +430,42 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <li>
                                     <i class="fas fa-paw"></i>
                                         <div class="hover-container">
-                                            <span>Pets</span>
+                                            <span>Питомцы</span>
                                             <div class="popup">
-                                                <a class="popup-content">three cats and a dog</a>
+                                                <a class="popup-content">три кота и собака</a>
                                             </div>
                                         </div>
                                   </li>
                                   <li>
                                     <i class="fas fa-chess"></i>
                                     <div class="hover-container">
-                                        <span>Chess</span>
+                                        <span>Шахматы</span>
                                         <div class="popup">
-                                            <a class="popup-content">candidate for Master of Sports</a>
+                                            <a class="popup-content">ELO 1800</a>
                                         </div>
                                   </li>
                                   <li>
                                     <i class="fas fa-book"></i>
                                     <div class="hover-container">
-                                        <span>Self-development</span>
+                                        <span>Саморазвитие</span>
                                         <div class="popup">
-                                            <a class="popup-content">there is a desire to realize your potential</a>
+                                            <a class="popup-content">желание реализовать свой потенциал</a>
                                         </div>
                                   </li>
                                   <li>
                                     <i class="fas fa-gamepad"></i>
                                     <div class="hover-container">
-                                        <span>Video games</span>
+                                        <span>Видео игры</span>
                                         <div class="popup">
-                                            <a class="popup-content">keep up to date with trends and the latest innovations</a>
+                                            <a class="popup-content">в курсе тенденций и последних новинок</a>
+                                        </div>
+                                  </li>
+                                  <li>
+                                    <i class="fas fa-gamepad"></i>
+                                    <div class="hover-container">
+                                        <span>Видео игры</span>
+                                        <div class="popup">
+                                            <a class="popup-content">в курсе тенденций и последних новинок</a>
                                         </div>
                                   </li>
                             </ul>
@@ -449,8 +474,9 @@ document.addEventListener('DOMContentLoaded', function () {
                   </div>
                 </div>
             </section>
-        </main>
-    </div>
+        </div>
+        </div>
+    </main>
 </body>
 
 </html>

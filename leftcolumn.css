@@ -1,0 +1,104 @@
+/* Profile Section */
+.profile {
+    position: relative;
+    background-color: var(--profile-theme);
+    padding: var(--spacing-large) var(--spacing-medium);
+    margin: var(--spacing-large) var(--spacing-large);
+    text-align: center;
+    user-select: none;
+    border-radius: 5%;
+    color: #fff;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 45%;
+    margin-bottom: 5%;
+}
+
+.photo img:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+.bio .name {
+    font-size: var(--font-size-large);
+    text-align: center;
+    color: var(--color-gray-light-1);
+    margin: 0;
+    margin-top: var(--spacing-small);
+}
+
+
+.bio .profession {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #fff;
+    padding-top: 3%;
+}
+
+.intro-section {
+	padding: 0 1rem;
+	color: var(--color-gray-dark-1);
+}
+
+.intro-section .title {
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 12%;
+}
+
+.about .paragraph {
+	text-align: justify;
+    font-size: var(--font-size-base);
+}
+
+.info-section {
+	margin: 1rem 0;
+}
+
+.info-section span {
+	position: relative;
+	transition: all 0.3s;
+}
+
+.info-section i {
+	color: var(--profile-theme);
+	width: 20px;
+	height: 20px;
+}
+
+ /* Технологический стек */
+  .techStack ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .techStack ul li {
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 18px;
+    color: #333;
+  }
+
+  .techStack ul li i {
+    margin-right: 10px;
+    color: #4682bf;
+  }
+
+  .techStack li:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }

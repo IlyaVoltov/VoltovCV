@@ -44,7 +44,7 @@ body {
 
 .wrapper {
     margin: 0 auto;
-    max-width: 70rem;
+    max-width: 75%;
     background-color: var(--color-gray-light-2);
     display: flex;
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
@@ -57,112 +57,12 @@ body {
 	z-index: 5;
 }
 
-/* Profile Section */
-.profile {
-    position: relative;
-    background-color: var(--profile-theme);
-    padding: var(--spacing-large) var(--spacing-medium);
-    margin-bottom: var(--spacing-large);
-    text-align: center;
-    user-select: none;
-}
-
-.profile::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: -15px;
-	width: 100%;
-	height: 30px;
-	background-color: var(--profile-theme);
-	transform: skewY(-5deg);
-}
-
-.photo img {
-	width: 90%;
-	border-radius: 18%;
-}
-
-.bio .name {
-    font-size: var(--font-size-large);
-    text-align: center;
-    color: var(--color-gray-light-1);
-    margin: 0;
-    margin-top: var(--spacing-small);
-}
-
-
-.bio .profession {
-	font-size: 1.2rem;
-	text-align: center;
-	color: var(--color-gray-light-1);
-	margin: 0;
-	padding-top: 3%;
-}
-
-.intro-section {
-	padding: 0 1rem;
-	color: var(--color-gray-dark-1);
-}
-
-.intro-section .title {
-    font-size: var(--font-size-medium);
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 12%;
-}
-
-.about .paragraph {
-	text-align: justify;
-    font-size: var(--font-size-base);
-}
-
-.info-section {
-	margin: 1rem 0;
-}
-
-.info-section span {
-	position: relative;
-	transition: all 0.3s;
-}
-
-.info-section i {
-	color: var(--profile-theme);
-	width: 20px;
-	height: 20px;
-}
-
-.link a {
-	text-decoration: none;
-	color: inherit;
-}
-
-.link span::after {
-	position: absolute;
-	content: '';
-	left: 50%;
-	bottom: -3px;
-	width: 0;
-	height: 2px;
-	background-color: var(--profile-theme);
-	transition: width 0.3s cubic-bezier(.92,.57,.33,1.02);
-	transform: translate(-50%, 0);
-}
-
-.link span:hover {
-	color: var(--profile-theme);
-}
-
-.link span:hover::after {
-	width: 100%;
-}
-
 /* Общий стиль для секций */
 .detail {
 	flex: 1 0 0;
-	background-color: white;
-	padding: 2rem;
+    background-color: var(--color-gray-light-1);
+    padding: 3%;
+    box-shadow: 5px 0px 15px 0px var(--color-gray-light-3);
 }
 
 .detail:hover > .detail-section:not(:hover) {
@@ -511,28 +411,6 @@ body {
     pointer-events: none;
 }
 
-.techStack ul {
-    list-style: none; /* Removing the standard list markers */
-    padding-left: 0;
-}
-
-.techStack li {
-    position: relative;
-    padding-left: 5%;
-    margin-bottom: 10px;
-    font-size: var(--font-size-base);
-
-}
-
-.techStack li::before {
-    content: '•'; /* Используем псевдоэлемент для маркера */
-    position: absolute;
-    left: 0;
-    color: var(--profile-theme); /* Marker color */
-    font-size: 24px; /* Marker size */
-    line-height: 18px;
-}
-
 .hover-container {
 	display: inline-block;
 }
@@ -585,42 +463,4 @@ body {
 .popup-content {
     color: white;
     font-weight: bold;
-}
-
-.top-bar {
-    width: 100%; /* Занимает всю ширину */
-    background-color: #f8f8f8; /* Цвет фона */
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для эффекта поднятия */
-}
-
-/* Стили для горизонтального меню в верхней панели */
-.nav-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Устанавливаем Flexbox для горизонтального расположения */
-    justify-content: flex-start; /* Выравнивание элементов по левому краю, можно изменить на center для центрирования */
-}
-
-.nav-menu li {
-    margin-right: 20px; /* Расстояние между элементами списка */
-}
-
-.nav-menu a {
-    text-decoration: none; /* Убираем подчеркивание ссылок */
-    color: #333; /* Цвет текста */
-    font-weight: bold; /* Жирный текст */
-}
-
-.nav-menu a:hover {
-    color: var(--color-tiffany); /* Цвет текста при наведении */
-}
-
-.top-bar {
-    margin: 0 auto;
-    max-width: 70rem;
-    background-color: var(--color-gray-light-2);
-    display: flex;
-    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
 }

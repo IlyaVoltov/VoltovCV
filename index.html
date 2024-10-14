@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./topbar.css">
+    <link rel="stylesheet" href="./leftcolumn.css">
     <script src="https://kit.fontawesome.com/b99e675b6e.js" defer></script>
     <script>
  // Script for opening and closing modal windows
@@ -47,14 +49,40 @@ document.addEventListener('DOMContentLoaded', function () {
 </head>
 
 <body>
-        <header class="top-bar">
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="CVs/russian.pdf" download="резюме ВолтовИП">Скачать CV</a></li>
-                    <li><a href="English.html">English</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header class="top-bar">
+        <nav class="nav-menu">
+          <ul>
+            <li>
+                <div class="title">
+                    <a href="#myModal" data-modal>Мои проекты</a>
+                 </div>
+              </a>
+            </li>
+            <li>
+                <div class="title">
+                    <a href="#myModalConf" data-modal>Конференции со мной</a>
+                 </div>
+              </a>
+            </li>
+            <li>
+                <div class="title">
+                    <a href="#myModalCourses" data-modal>Курсы</a>
+                 </div>
+              </a>
+            </li>
+            <li>
+                <a href="CVs/russian.pdf" download="резюме ВолтовИП">
+                <i class="fas fa-download"></i> Скачать CV
+              </a>
+            </li>
+            <li>
+                <a href="English.html">
+                  <i class="fas fa-globe"></i> English
+                </a>
+            </li>
+          </ul>
+        </nav>
+    </header>
 
     <main>
         <div class="wrapper">
@@ -78,12 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <section class="intro-section contact">
                 <h1 class="title">Контакты</h1>
                 <div class="info-section">
-                    <i class="fas fa-phone"></i>
-                    <a target="_blank" rel="author" href="tel:+79817956314">
-                        <span>+7(981)795-63-14</span>
-                    </a>
-                </div>
-                <div class="info-section">
                     <i class="fas fa-envelope"></i>
                     <a target="_blank" rel="author" href="mailto:ivoltovp@gmail.com">
                         <span>ivoltovp@gmail.com</span>
@@ -103,20 +125,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </section>
 
-            <section class="intro-section contact">
+            <section class="intro-section stack">
                 <h1 class="title">Технологический стек</h1>
                 <div class="techStack">
-                    <ul>
-                        <li>Python (Pandas, Numpy, Matplotlib)</li>
-                        <li>Jupyter; Google Colab; PyCharm</li>
-                        <li>PostgreSQL; ClickHouse</li>
-                        <li>Swagger</li>
-                        <li>Docker</li>
-                        <li>Apache Airflow</li>
-                        <li>Plotly/Dash</li>
-                    </ul>
+                  <ul>
+                    <li><i class="fas fa-code"></i>C#; Python; JS</li>
+                    <li><i class="fas fa-laptop-code"></i>Jupyter; Google Colab; PyCharm</li>
+                    <li><i class="fas fa-database"></i>PostgreSQL; ClickHouse; MongoDB</li>
+                    <li><i class="fas fa-chart-bar"></i>Plotly/Dash</li>
+                    <li><i class="fas fa-server"></i>Docker; Kubernetes</li>
+                    <li><i class="fas fa-globe"></i>Swagger (работа с API)</li>
+                    <li><i class="fas fa-tasks"></i>Apache Airflow</li>
+                    <li><i class="fas fa-code-branch"></i>GIT</li>
+                  </ul>
                 </div>
-            </section>
+              </section>
 
 
             <section class="intro-section modals">
@@ -151,9 +174,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         </footer>
                     </div>
                 </div>
-                <div class="title">
-                   <a href="#myModalCourses" data-modal>Курсы</a>
-                </div>
             </section>
 
             <section class="intro-section modals">
@@ -176,9 +196,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         <a class="mconfclose" data-close>закрыть</a>
                         </footer>
                     </div>
-                </div>
-                <div class="title">
-                    <a href="#myModalConf" data-modal>Конференции</a>
                 </div>
             </section>
 
@@ -246,9 +263,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         <a class="mprojclose" data-close>закрыть</a>
                         </footer>
                     </div>
-                </div>
-                <div class="title">
-                    <a href="#myModal" data-modal>Проекты</a>
                 </div>
             </section>
 
@@ -444,6 +458,14 @@ document.addEventListener('DOMContentLoaded', function () {
                                         <span>Видео игры</span>
                                         <div class="popup">
                                             <a class="popup-content">в курсе тенденций и последних новинок</a>
+                                        </div>
+                                  </li>
+                                  <li>
+                                    <i class="fas fa-language"></i>
+                                    <div class="hover-container">
+                                        <span>Изучение языков</span>
+                                        <div class="popup">
+                                            <a class="popup-content">English / Deutsch</a>
                                         </div>
                                   </li>
                             </ul>
