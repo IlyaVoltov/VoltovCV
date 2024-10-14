@@ -11,7 +11,7 @@
     --timeline-circle-theme: #14253e;
 
     --font-family-base: 'PT Sans', sans-serif;
-    --font-size-base: 16px;
+    --font-size-base: 18px;
     --font-size-large: 1.8rem;
     --font-size-medium: 1.2rem;
     --font-size-small: 0.8rem;
@@ -58,6 +58,16 @@ body {
 	box-shadow: 5px 0px 15px 0px #b3b3b3;
     border-radius: 28px;
     margin: var(--font-size-small);
+}
+
+.intro-section.about, .intro-section.stack {
+    background-color: #f7f7f7; /* Светлый фон */
+    padding: var(--spacing-small);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Мягкая тень */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; /* Центрируем секцию */
 }
 
 /* Общий стиль для секций */
@@ -142,7 +152,7 @@ body {
 }
 
 .timeline-block p, time {
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	margin: 5px 0;
 	color: var(--color-gray-dark-2);
 }
@@ -209,45 +219,6 @@ body {
 	background-color: var(--profile-theme);
 }
 
-/* Tools */
-.tool-list {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	list-style: none;
-
-}
-
-.tool-list > li {
-	position: relative;
-	text-align: center;
-	flex: 0 0 20%;
-}
-
-.tool-list > li > svg {
-	position: relative;
-	fill: transparent;
-	width: 100%;
-	transform: rotate(-90deg);
-}
-
-.tool-list > li > .tl-name,
-.tool-list > li > .tl-exp {
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.tool-list > li > .tl-name {
-	top: 40%;
-	font-size: 0.95rem;
-}
-
-.tool-list > li > .tl-exp {
-	top: calc(50% + 1.4rem);
-	font-size: 0.9rem;
-}
-
 /* Media Queries */
 @media (max-width: 1024px) {
     html {
@@ -266,98 +237,6 @@ body {
     .detail {
         padding: var(--spacing-medium);
     }
-}
-/* Button and Link Styles */
-.link {
-    overflow: hidden;
-}
-
-/* Modal Styles */
-
-/* Basic styles for a modal window */
-.info-section .modal-body {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-}
-
-.modal-body {
-z-index: 1000;
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid var(--profile-theme);
-    width: 33%;
-    max-height: 80vh; /* Limiting the height of the modal window */
-    overflow-y: auto; /* Enabling vertical scrolling */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-}
-
-.modal-title {
-	text-align: center;
-	font-weight: bold;
-	justify-content: space-between;
-}
-
-/* Styles for the close button */
-.mcclose, .mconfclose, .mprojclose {
-    color: #aaa;
-    float: right;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.mcclose:hover, .mconfclose:hover, .mprojclose:hover,
-.mcclose:focus, .mconfclose:focus, .mprojclose:focus {
-    color: var(--color-blue-dark-1);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-body {
-    max-height: 60vh; /* Content height restriction */
-    overflow-y: auto; /* Enabling scrolling for content */
-    padding-right: 10px; /* Removes the overlap of the scrollbar content */
-	border-top: 1px solid var(--color-gray-light-1);
-}
-
-.modal-body {
-    scrollbar-width: none; /* Removes the scrollbar in Firefox */
-}
-
-/* To completely disappear the scrollbar and ensure seamless scrolling */
-.modal-body {
-    overflow: -moz-scrollbars-none;
-    -ms-overflow-style: none;
-}
-
-.modal-container-footer {
-	padding: 20px 32px;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	border-top: 1px solid var(--color-gray-light-1);
-	gap: 12px;
-	position: relative;
-}
-.modal-container-footer:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -91px;
-    left: 2%;
-    right: 2%;
-    height: 90px;
-    flex-shrink: 0;
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.85), transparent);
-    pointer-events: none;
 }
 
 .hover-container {

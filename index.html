@@ -9,79 +9,63 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./topbar.css">
     <link rel="stylesheet" href="./leftcolumn.css">
+    <link rel="stylesheet" href="./contacts.css">
+    <link rel="stylesheet" href="./modals.css">
     <link rel="stylesheet" href="./hobby.css">
     <script src="https://kit.fontawesome.com/b99e675b6e.js" defer></script>
     <script>
- // Script for opening and closing modal windows
-document.addEventListener('DOMContentLoaded', function () {
-    const modals = document.querySelectorAll('[data-modal]');
-    const closeButtons = document.querySelectorAll('[data-close]');
+        // Script for opening and closing modal windows
+       document.addEventListener('DOMContentLoaded', function () {
+           const modals = document.querySelectorAll('[data-modal]');
+           const closeButtons = document.querySelectorAll('[data-close]');
 
-    // Open modal
-    modals.forEach(modal => {
-        modal.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetModal = document.querySelector(this.getAttribute('href'));
-            if (targetModal) {
-                targetModal.style.display = 'block';
+           // Open modal
+           modals.forEach(modal => {
+               modal.addEventListener('click', function (e) {
+                   e.preventDefault();
+                   const targetModal = document.querySelector(this.getAttribute('href'));
+                   if (targetModal) {
+                       targetModal.style.display = 'block';
 
-                // Close modal when clicking outside of it
-                window.addEventListener('click', function outsideClick(event) {
-                    if (event.target === targetModal) {
-                        targetModal.style.display = 'none';
-                        window.removeEventListener('click', outsideClick);
-                    }
-                });
-            }
-        });
-    });
+                       // Close modal when clicking outside of it
+                       window.addEventListener('click', function outsideClick(event) {
+                           if (event.target === targetModal) {
+                               targetModal.style.display = 'none';
+                               window.removeEventListener('click', outsideClick);
+                           }
+                       });
+                   }
+               });
+           });
 
-    // Close modal using close buttons
-    closeButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const modal = this.closest('.modal');
-            if (modal) {
-                modal.style.display = 'none';
-            }
-        });
-    });
-});
+           // Close modal using close buttons
+           closeButtons.forEach(button => {
+               button.addEventListener('click', function () {
+                   const modal = this.closest('.modal');
+                   if (modal) {
+                       modal.style.display = 'none';
+                   }
+               });
+           });
+       });
     </script>
+
+
 </head>
 
 <body>
+
     <header class="top-bar">
         <nav class="nav-menu">
-          <ul>
-            <li>
-                <div class="title">
-                    <a href="#myModal" data-modal>Мои проекты</a>
-                 </div>
-              </a>
-            </li>
-            <li>
-                <div class="title">
-                    <a href="#myModalConf" data-modal>Конференции со мной</a>
-                 </div>
-              </a>
-            </li>
-            <li>
-                <div class="title">
-                    <a href="#myModalCourses" data-modal>Курсы</a>
-                 </div>
-              </a>
-            </li>
-            <li>
-                <a href="CVs/russian.pdf" download="резюме ВолтовИП">
-                <i class="fas fa-download"></i> Скачать CV
-              </a>
-            </li>
-            <li>
-                <a href="English.html">
-                  <i class="fas fa-globe"></i> English
-                </a>
-            </li>
-          </ul>
+            <ul>
+                <li><a href="#myModal" data-modal>Мои проекты</a></li>
+                <li><a href="#myModalConf" data-modal>Конференции со мной</a></li>
+                <li><a href="#myModalCourses" data-modal>Курсы</a></li>
+                <li><a href="CVs/russian.pdf" download="резюме ВолтовИП">
+                    <i class="fas fa-download"></i> Скачать CV</a>
+                </li>
+                <li><a href="English.html"><i class="fas fa-globe"></i> English</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -133,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   <ul>
                     <li><i class="fas fa-code"></i>C#; Python; JS</li>
                     <li><i class="fas fa-laptop-code"></i>Jupyter; Google Colab; PyCharm</li>
-                    <li><i class="fas fa-database"></i>PostgreSQL; ClickHouse; MongoDB</li>
+                    <li><i class="fas fa-database"></i>PostgreSQL; ClickHouse</li>
                     <li><i class="fas fa-chart-bar"></i>Plotly/Dash</li>
                     <li><i class="fas fa-server"></i>Docker; Kubernetes</li>
                     <li><i class="fas fa-globe"></i>Swagger (работа с API)</li>
@@ -200,7 +184,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </section>
 
-
             <section class="intro-section modals">
                 <div id="myModal" class="modal">
                     <div class="modal-content">
@@ -232,6 +215,15 @@ document.addEventListener('DOMContentLoaded', function () {
                                 </ul>
                             </li>
                             <br>
+                            <li><span style="font-weight: bold; text-decoration: underline;">Системы бизнес-аналитики на базе Power BI и QlikView</span>
+                                <br>должность - <span style="text-decoration: underline;">аналитик данных, программист</span>
+                                <ul>
+                                    <li>создание информационных панелей (объединение данных из различных источников для создания наглядных и понятных дашбордов)</li>
+                                    <li>импорт данных из различных источников (Excel, базы данных SQL, веб-сервисы)</li>
+                                    <li>создание сквозного конвейера обработки данных для обеспечения полного цикла обработки — от хранилища данных до отчетов BI</li>
+                                </ul>
+                            </li>
+                            <br>
                             <li><span style="font-weight: bold; text-decoration: underline;">"Управление НИОКР"</span> - ERP (управление бизнес-процессами)
                                 <br>должность - <span style="text-decoration: underline;">руководитель команды разработки</span>
                                 <br>Многомодульная система для управления бизнес-процессами компании.
@@ -247,15 +239,6 @@ document.addEventListener('DOMContentLoaded', function () {
                                         <li>аналитическая панель мониторингаs</li>
                                     </ul>
                                     <li>пакетная обработка ETL</li>
-                                </ul>
-                            </li>
-                            <br>
-                            <li><span style="font-weight: bold; text-decoration: underline;">Системы бизнес-аналитики на базе Power BI и QlikView</span>
-                                <br>должность - <span style="text-decoration: underline;">аналитик данных, программист</span>
-                                <ul>
-                                    <li>создание информационных панелей (объединение данных из различных источников для создания наглядных и понятных дашбордов)</li>
-                                    <li>импорт данных из различных источников (Excel, базы данных SQL, веб-сервисы)</li>
-                                    <li>создание сквозного конвейера обработки данных для обеспечения полного цикла обработки — от хранилища данных до отчетов BI</li>
                                 </ul>
                             </li>
                         </ul>
