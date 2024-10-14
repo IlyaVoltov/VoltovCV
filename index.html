@@ -4,13 +4,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Волтов Илья аналитик данных</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./topbar.css">
     <link rel="stylesheet" href="./leftcolumn.css">
     <link rel="stylesheet" href="./contacts.css">
     <link rel="stylesheet" href="./modals.css">
+    <link rel="stylesheet" href="./skills.css">
     <link rel="stylesheet" href="./hobby.css">
     <script src="https://kit.fontawesome.com/b99e675b6e.js" defer></script>
     <script>
@@ -58,12 +57,10 @@
     <header class="top-bar">
         <nav class="nav-menu">
             <ul>
-                <li><a href="#myModal" data-modal>Мои проекты</a></li>
-                <li><a href="#myModalConf" data-modal>Конференции со мной</a></li>
-                <li><a href="#myModalCourses" data-modal>Курсы</a></li>
-                <li><a href="CVs/russian.pdf" download="резюме ВолтовИП">
-                    <i class="fas fa-download"></i> Скачать CV</a>
-                </li>
+                <li><a href="#myModal" data-modal><i class="fas fa-folder"></i> Мои проекты</a></li>
+                <li><a href="#myModalConf" data-modal><i class="fas fa-comments"></i> Конференции со мной</a></li>
+                <li><a href="#myModalCourses" data-modal><i class="fas fa-graduation-cap"></i> Курсы</a></li>
+                <li><a href="CVs/russian.pdf" download="резюме ВолтовИП"><i class="fas fa-download"></i> Скачать CV</a></li>
                 <li><a href="English.html"><i class="fas fa-globe"></i> English</a></li>
             </ul>
         </nav>
@@ -84,8 +81,9 @@
             <section class="intro-section about">
                 <h1 class="title">О себе</h1>
                 <p class="paragraph">
-                    Высокомотивированный и ответственный IT-профессионал с 10-летним опытом, включая опыт руководства разработкой.
-                    <br>Внимательно слежу за современными тенденциями в области науки о данных и активно применяю их в работе.
+                    Ответственный IT-профессионал с 10-летним опытом, включая участие в разработке и руководство проектами.
+                    <br>Следую современным тенденциям в области науки о данных и стараюсь применять их на практике.
+                    <br>Открыт к новым знаниям и стремлюсь к профессиональному развитию.
                 </p>
             </section>
 
@@ -114,16 +112,35 @@
             <section class="intro-section stack">
                 <h1 class="title">Технологический стек</h1>
                 <div class="techStack">
-                  <ul>
-                    <li><i class="fas fa-code"></i>C#; Python; JS</li>
+                <ul>
+                    <li><i class="fas fa-code"></i>Python; JS</li>
+                </ul>
+                <h4>Инструменты для разработки и анализа данных</h4>
+                <ul>
                     <li><i class="fas fa-laptop-code"></i>Jupyter; Google Colab; PyCharm</li>
-                    <li><i class="fas fa-database"></i>PostgreSQL; ClickHouse</li>
+                </ul>
+                <h4>Базы данных</h4>
+                <ul>
+                    <li><i class="fas fa-database"></i>PostgreSQL; ClickHouse; MongoDB</li>
+                </ul>
+                <h4>Визуализация</h4>
+                <ul>
                     <li><i class="fas fa-chart-bar"></i>Plotly/Dash</li>
+                </ul>
+                <h4>Контейнеризация и управление данными</h4>
+                <ul>
                     <li><i class="fas fa-server"></i>Docker; Kubernetes</li>
                     <li><i class="fas fa-globe"></i>Swagger (работа с API)</li>
                     <li><i class="fas fa-tasks"></i>Apache Airflow</li>
-                    <li><i class="fas fa-code-branch"></i>GIT</li>
-                  </ul>
+                </ul>
+                <h4>BI-инструменты</h4>
+                <ul>
+                    <li><i class="fas fa-chart-pie"></i>Power BI; QlikView</li>
+                </ul>
+                <h4>Управление проектами</h4>
+                <ul>
+                    <li><i class="fas fa-tools"></i>JetBrains Space; Microsoft Azure</li>
+                </ul>
                 </div>
             </section>
 
@@ -253,7 +270,7 @@
         </div>
 
         <div class="detail">
-            <section class="detail-section edu">
+            <section class="detail-section pg">
                 <div class="detail-title">
                     <div class="title-icon">
                         <i class="fas fa-user-graduate"></i>
@@ -276,7 +293,7 @@
                 </div>
             </section>
 
-            <section class="detail-section pg-skill">
+            <section class="detail-section pg">
                 <div class="detail-title">
                     <div class="title-icon">
                         <i class="fas fa-user-tie"></i>
@@ -292,8 +309,8 @@
                             <div class="popup">
                                 <a class="popup-header">Обязанности:</a>
                                 <a class="popup-content"><br>- формулирование бизнес-задач (переговоры с клиентами)
-                                <br>- <code>сбор, очистка и анализ</code> данных (разработка гипотез и моделей)
-                                <br>- <code>разработка аналитических отчетов (дашбордов)</code> на основе разработанных моделей
+                                <br>- сбор, очистка и анализ данных (разработка гипотез и моделей)
+                                <br>- разработка аналитических отчетов (дашбордов) на основе разработанных моделей
                                 </a>
                             </div>
                         <time>2023 - 2024</time>
@@ -307,14 +324,14 @@
                             <div class="popup">
                                 <a class="popup-header">Обязанности:</a>
                                 <a class="popup-content">
-                                    <br><code> - организационные задачи</code>
+                                    <br>- организационные задачи
                                     <ul>
                                         <li>управление командой разработки</li>
                                         <li>Agile (scrum/kanban)</li>
                                         <li>разработка дорожных карт and user-stories</li>
                                         <li>преобразование бизнес-требований в технические задачи</li>
                                     </ul>
-                                    <code> - технические задачи</code>
+                                    - технические задачи
                                     <ul>
                                         <li>разработка технической стратегии для проекта</li>
                                         <li>выбор технологий и инструментов для проекта</li>
@@ -334,8 +351,8 @@
                             <div class="popup">
                                 <a class="popup-header">Обязанности:</a>
                                 <a class="popup-content"><br>- оптимальное планирование и совместная работа в крупной команде
-                                <br>- создание статистических моделей и <code>применение машинного обучения</code> для решения задач
-                                <br>- <code>реализация end-to-end data pipeline</code> от хранилища данных к BI
+                                <br>- создание статистических моделей и применение машинного обучения для решения задач
+                                <br>- реализация end-to-end data pipeline от хранилища данных к BI
                             </a>
                             </div>
                         <time>2014 - 2018</time>
@@ -344,7 +361,7 @@
                 </div>
             </section>
 
-            <section class="detail-section pg-skill">
+            <section class="detail-section pg">
                 <div class="detail-title">
                     <div class="title-icon">
                         <i class="fas fa-laptop-code"></i>
@@ -399,7 +416,7 @@
                 </div>
             </section>
 
-            <section class="detail-section hobbi">
+            <section class="detail-section pg">
                 <div class="detail-section interests">
                   <div class="detail-title">
                     <div class="title-icon">

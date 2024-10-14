@@ -80,6 +80,15 @@ body {
     margin: var(--font-size-small);
 }
 
+.detail-section.pg {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Мягкая тень */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .detail:hover > .detail-section:not(:hover) {
 	opacity: 0.3;
 }
@@ -95,6 +104,7 @@ body {
 .detail-title {
 	display: flex;
 	align-items: center;
+	margin-bottom: 20px;
 }
 
 .detail-section > .detail-content {
@@ -147,6 +157,7 @@ body {
 
 .timeline-block h1 {
 	font-size: 1rem;
+	color: #333;
 	margin: 5px 0;
 	transition: all 0.3s;
 }
@@ -187,37 +198,6 @@ body {
 	animation: circle 1.2s infinite;
 }
 
-/* Программные навыки */
-.pg-list, .tool-list, .favor-list {
-	padding: 0;
-	list-style: none;
-}
-
-.pg-list > li {
-	margin: 1rem 0;
-	display: flex;
-	align-items: center;
-}
-
-.sb-skeleton {
-	position: relative;
-	flex: 1 0 auto;
-	height: 2px;
-	background-color: var(--color-gray-dark-3);
-}
-
-.pg-list > li > span {
-	flex: 0 0 25%;
-}
-
-.sb-skeleton > .skillbar {
-	position: absolute;
-	left: 0;
-	top: -1px;
-	width: var(--pgbar-length);
-	height: 4px;
-	background-color: var(--profile-theme);
-}
 
 /* Media Queries */
 @media (max-width: 1024px) {
@@ -236,6 +216,13 @@ body {
     }
     .detail {
         padding: var(--spacing-medium);
+    }
+	.detail-section.pg {
+        padding: 20px;
+    }
+
+    .detail-title span {
+        font-size: 20px;
     }
 }
 

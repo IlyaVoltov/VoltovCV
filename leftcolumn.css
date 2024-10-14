@@ -91,3 +91,10 @@
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
+
+  .intro-section h4 {
+    font-weight: 550;
+    color: #333;
+    margin-top: var(--spacing-large); /* Устанавливает верхний отступ */
+    margin-bottom: var(--spacing-small); /* Устанавливает верхний отступ */
+}
