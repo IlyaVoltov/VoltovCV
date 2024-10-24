@@ -493,6 +493,7 @@
                 const modal = this.closest('.modal');
                 if (modal) {
                     modal.style.display = 'none';
+                    location.reload(); // Обновляем страницу при закрытии модального окна
                 }
             });
         });
