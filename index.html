@@ -12,43 +12,6 @@
     <link rel="stylesheet" href="./skills.css">
     <link rel="stylesheet" href="./hobby.css">
     <script src="https://kit.fontawesome.com/b99e675b6e.js" defer></script>
-    <script>
-        // Script for opening and closing modal windows
-       document.addEventListener('DOMContentLoaded', function () {
-           const modals = document.querySelectorAll('[data-modal]');
-           const closeButtons = document.querySelectorAll('[data-close]');
-
-           // Open modal
-           modals.forEach(modal => {
-               modal.addEventListener('click', function (e) {
-                   e.preventDefault();
-                   const targetModal = document.querySelector(this.getAttribute('href'));
-                   if (targetModal) {
-                       targetModal.style.display = 'block';
-
-                       // Close modal when clicking outside of it
-                       window.addEventListener('click', function outsideClick(event) {
-                           if (event.target === targetModal) {
-                               targetModal.style.display = 'none';
-                               window.removeEventListener('click', outsideClick);
-                           }
-                       });
-                   }
-               });
-           });
-
-           // Close modal using close buttons
-           closeButtons.forEach(button => {
-               button.addEventListener('click', function () {
-                   const modal = this.closest('.modal');
-                   if (modal) {
-                       modal.style.display = 'none';
-                   }
-               });
-           });
-       });
-    </script>
-
 </head>
 
 <body>
@@ -151,27 +114,30 @@
             <section class="intro-section modals">
                 <div id="myModalCourses" class="modal">
                     <div class="modal-content">
+                        <input type="text" id="searchInput" placeholder="поиск...">
                         <h3 class="modal-title"">Основные курсы</h3>
                         <div class="modal-body">
                         <ul>
                             <li>Coursera</li>
                             <ul>
-                                <li>Master of Applied Data Science</li>
-                                <li>Google Project Management</li>
-                                <li>Introduction to Data Analytics</li>
+                                <li id="Coursera">Master of Applied Data Science</li>
+                                <li id="Coursera">Google Project Management</li>
+                                <li id="Coursera">Introduction to Data Analytics</li>
                             </ul>
                             <li>Kaggle</li>
                             <ul>
-                                <li>Advanced SQL <a href="certificates/AdvancedSQL.png">(сертификат)</a></li>
-                                <li>Data Cleaning <a href="certificates/DataCleaning.png">(сертификат)</a></li>
-                                <li>Python <a href="certificates/Python.png">(сертификат)</a></li>
+                                <li id="Kaggle">Advanced SQL <a href="certificates/AdvancedSQL.png">(сертификат)</a></li>
+                                <li id="Kaggle">Data Visualization <a href="certificates/DV.png">(сертификат)</a></li>
+                                <li id="Kaggle">Data Cleaning <a href="certificates/DataCleaning.png">(сертификат)</a></li>
+                                <li id="Kaggle">Python <a href="certificates/Python.png">(сертификат)</a></li>
                             </ul>
-                            <li>DevOps Старт, Школа DevOps, Санкт-Петербург <a href="certificates/devOPS.png">(сертификат)</a></li>
+                            <li id="DevOps">DevOps инженер, Школа DevOps, Санкт-Петербург <a href="certificates/devOPS.png">(сертификат)</a></li>
                             <li>Stepik</li>
                             <ul>
-                                <li>Introductory Econometrics: a Practical Approach <a href="certificates/econom.pdf">(сертификат)</a></li>
-                                <li>Поколение Python</li>
-                                <li>Интерактивный тренажер по SQL</li>
+                                <li id="Stepik">Introductory Econometrics: a Practical Approach <a href="certificates/econom.pdf">(сертификат)</a></li>
+                                <li id="Stepik">Поколение Python</li>
+                                <li id="Stepik">Интерактивный тренажер по SQL</li>
+                                <li id="Stepik">Основы поисковой оптимизации SEO. Факторы ранжирования сайтов <a href="certificates/SEO.png">(сертификат)</a></li>
                             </ul>
                             <li>KARPOV.COURSES. Симулятор аналитика данных</li>
                         </ul>
@@ -491,5 +457,67 @@
         </div>
     </main>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Modal opening and closing logic
+        const modals = document.querySelectorAll('[data-modal]');
+        const closeButtons = document.querySelectorAll('[data-close]');
+        const searchInput = document.getElementById('searchInput');
+
+        // Open modal
+        modals.forEach(modal => {
+            modal.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetModal = document.querySelector(this.getAttribute('href'));
+                if (targetModal) {
+                    targetModal.style.display = 'block';
+
+                    // Close modal when clicking outside of it
+                    window.addEventListener('click', function outsideClick(event) {
+                        if (event.target === targetModal) {
+                            targetModal.style.display = 'none';
+                            window.removeEventListener('click', outsideClick);
+                        }
+                    });
+                }
+            });
+        });
+
+        // Close modal using close buttons
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const modal = this.closest('.modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                    location.reload(); // Обновляем страницу при закрытии модального окна
+                }
+            });
+        });
+
+        // Search logic
+        searchInput.addEventListener('input', function() {
+    const filter = this.value.toLowerCase();
+    const items = document.querySelectorAll('.modal-body ul > li'); // Указываем селектор для верхних li
+
+    items.forEach(function(item) {
+        const sublist = item.querySelector('ul'); // Ищем вложенные ul
+
+        // Проверяем содержимое элемента и его id
+        if (item.textContent.toLowerCase().includes(filter) || item.id.toLowerCase().includes(filter)) {
+            item.style.display = ''; // Показываем элемент
+            if (sublist) {
+                sublist.style.display = ''; // Показываем вложенный список, если он есть
+            }
+        } else {
+            item.style.display = 'none'; // Скрываем элемент
+            if (sublist) {
+                sublist.style.display = 'none'; // Скрываем вложенный список
+            }
+        }
+    });
+});
+
+    });
+</script>
 
 </html>

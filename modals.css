@@ -29,6 +29,7 @@
 .modal-title {
     font-size: 22px;
     font-weight: bold;
+    margin-top: 10%;
     margin-bottom: 20px;
     text-align: center;
     position: relative;
@@ -71,6 +72,21 @@
     background-color: #366a94;
 }
 
+#searchInput {
+    width: 35%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  #searchInput:focus {
+    outline: none;
+}
+
 /* Адаптивные стили для мобильных устройств */
 @media (max-width: 768px) {
     .modal-content {
@@ -81,6 +97,7 @@
     .modal-title {
         font-size: 16px;
         padding-right: 50px; /* Оставляем пространство для кнопки закрытия */
+        margin-top: 15%;
     }
 
     .modal-body {
